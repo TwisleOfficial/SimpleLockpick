@@ -17,7 +17,7 @@ This script will allow you to lockpick cars with a little mini game to made it a
 4. Load Into Your Server and Happy Lockpicking
 
 ![image](https://user-images.githubusercontent.com/102629991/171970912-77a4b879-8f0d-4fbf-9a8f-26fb413e316c.png)
-https://i.imgur.com/DK1cus8.png
+![image](https://i.imgur.com/DK1cus8.png)
 
 
 If you do use, change, and/or re-distribute my script/work you must credit me.
