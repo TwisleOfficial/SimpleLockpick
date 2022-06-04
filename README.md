@@ -7,6 +7,6 @@ This script will allow you to lockpick cars with a little mini game to made it a
 
 ## Dependencies:
 
-[qb-lock]([qb-lock](https://github.com/Tex27/qb-lock))
+([qb-lock](https://github.com/Tex27/qb-lock))
 
 If you do use, change, and/or re-distribute my script/work you must credit me.
