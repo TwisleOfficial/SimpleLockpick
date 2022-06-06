@@ -17,7 +17,7 @@ local function LockPick()
             TaskPlayAnim(ped, "mp_arresting", "a_uncuff", 1.0 ,-1.0 , 5500, 0, 1, true, true, true)
 
             SetVehicleDoorsLocked(veh, 1)
-            SetVehicleAlarm(veh, true)d
+            SetVehicleAlarm(veh, true)
             SetVehicleNeedsToBeHotwired(veh, true)
             SetVehicleDoorsLockedForAllPlayers(veh, false)
             FreezeEntityPosition(ped, true)
