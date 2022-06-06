@@ -15,9 +15,10 @@ local function LockPick()
             RequestAnimDict("mp_arresting")
             while (not HasAnimDictLoaded("mp_arresting")) do Citizen.Wait(0) end
             TaskPlayAnim(ped, "mp_arresting", "a_uncuff", 1.0 ,-1.0 , 5500, 0, 1, true, true, true)
-
+            exports['mythic_notify']:DoCustomHudText('inform', 'Lockpicking was a sucess! Quick, drive away before the cops come!', 4500, { ['background-color'] = '#2F5C73', ['color'] = '#ffffff' })
+            
             SetVehicleDoorsLocked(veh, 1)
-            SetVehicleAlarm(veh, true)d
+            SetVehicleAlarm(veh, true)
             SetVehicleNeedsToBeHotwired(veh, true)
             SetVehicleDoorsLockedForAllPlayers(veh, false)
             FreezeEntityPosition(ped, true)
@@ -43,6 +44,7 @@ RegisterCommand('lockpick', function()
     if distance < 3 then
         if locked ~= 2 then
             SetVehicleDoorsLocked(veh, 7)
+            exports['mythic_notify']:DoCustomHudText ('inform', 'Lockpicking vehicle....', 4500, { ['background-color'] = '#2F5C73', ['color'] = '#ffffff' })
             LockPick()
 
         end
