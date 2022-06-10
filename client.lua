@@ -1,16 +1,24 @@
-local ped = PlayerPedId()
+RegisterCommand('lockpick', function()
 
-local function LockPick()
-
-    Citizen.Wait(10)
-
+    local ped = PlayerPedId()
     local pos = GetEntityCoords(ped)
     local veh = GetClosestVehicle(pos.x, pos.y, pos.z, 3.0, 0, 71)
-    local time = math.random(7,10)
-    local circles = math.random(2,4)
-    local success = exports['qb-lock']:StartLockPickCircle(circles, time, success)
+    local vehpos = GetEntityCoords(veh)
+    local locked = GetVehicleDoorLockStatus(veh)
+    local distance = #(vehpos - pos)
 
-    if success then
+    print(distance)
+
+    if distance < 3 then
+        if locked ~= 2 then
+
+            local seconds = math.random(9,12)
+            local circles = math.random(1,3)
+            local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+            
+            if success then
+
+            SetVehicleDoorsLocked(veh, 7)
 
             RequestAnimDict("mp_arresting")
             while (not HasAnimDictLoaded("mp_arresting")) do Citizen.Wait(0) end
@@ -27,28 +35,7 @@ local function LockPick()
 
     FreezeEntityPosition(ped, false)
 
-    end
-end
-
-RegisterCommand('lockpick', function()
-
-    local pos = GetEntityCoords(ped)
-    local veh = GetClosestVehicle(pos.x, pos.y, pos.z, 3.0, 0, 71)
-    local vehpos = GetEntityCoords(veh)
-    local locked = GetVehicleDoorLockStatus(veh)
-    local distance = #(vehpos - pos)
-
-    print(distance)
-
-    if distance < 3 then
-        if locked ~= 2 then
-            SetVehicleDoorsLocked(veh, 7)
-            LockPick()
-
         end
 end
+end
 end)
-
-
-
-
