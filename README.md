@@ -1,5 +1,20 @@
 
 ![FiveMDevThumbNail](https://user-images.githubusercontent.com/102629991/171970595-522d7b63-c0d4-4609-a984-36d83d7944e3.png)
+</p>
+<p align="center">
+  <a href="https://github.com/TwisleOfficial/github-profile-trophy/issues">
+    <img src="https://img.shields.io/github/issues/TwisleOfficial/SimpleLockpick"/> 
+  </a>
+  <a href="https://github.com/TwisleOfficial/github-profile-trophy/network/members">
+    <img src="https://img.shields.io/github/forks/TwisleOfficial/SimpleLockpick"/> 
+  </a>  
+  <a href="https://github.com/TwisleOfficial/github-profile-trophy/stargazers">
+    <img src="https://img.shields.io/github/stars/TwisleOfficial/SimpleLockpick"/> 
+  </a>
+    <a href="https://github.com/TwisleOfficial/github-profile-trophy/LICENSE">
+    <img src="https://img.shields.io/github/license/TwisleOfficial/SimpleLockpick"/> 
+  </a>
+</p>
 
 # Simple Lockpicking FiveM Script
 
